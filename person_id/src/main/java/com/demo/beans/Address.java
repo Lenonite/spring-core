@@ -1,9 +1,11 @@
 package com.demo.beans;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Address {
 
-    private String streetName;
-
+    private String streetName = "CreekBuild road";
 
 
     public String getStreetName() {

@@ -1,9 +1,26 @@
 package com.demo.beans;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+import javax.annotation.PostConstruct;
+
+@Component
 public class Person {
 
-    private String name;
-    private Address address;
+    private String name = "Thw thw";
+
+    private final Address address;
+
+    @PostConstruct
+    public void init(){
+        System.out.println("Postconstruct :Address ::"+address.getClass().getSimpleName());
+    }
+
+    public Person(Address address){
+        this.address=address;
+
+    }
 
 
     public String getName() {
@@ -18,19 +35,20 @@ public class Person {
         return address;
     }
 
-    public void setAddress(Address address) {
-        this.address = address;
+
+    public String personInfo() {
+
+        return name + ":: " + address.getStreetName();
     }
 
-    public String personInfo(){
 
-        return name+":: "+address.getStreetName();
-    }
 
-    public Person(Address address) {
-        this.address = address;
-    }
 
-    public Person() {
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", address=" + address +
+                '}';
     }
 }

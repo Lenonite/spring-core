@@ -1,5 +1,9 @@
 package com.demo.beans;
 
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Component;
+
+@Component//@QuestType(type = QuestType.Type.Matrimont)
 public class GreatMatrimonyQuest implements Quest{
 
     @Override

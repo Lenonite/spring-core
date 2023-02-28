@@ -1,5 +1,8 @@
 package com.demo.beans;
 
-public interface Quest {
+import org.springframework.stereotype.Component;
+
+@Component
+public interface Quest{
     String goQuest();
 }
