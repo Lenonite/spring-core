@@ -10,6 +10,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>sample-di</module>
+        <module>person_id</module>
     </modules>
 
     <properties>
