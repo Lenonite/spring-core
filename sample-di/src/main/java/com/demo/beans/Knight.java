@@ -30,6 +30,9 @@ public class Knight {
     }
     @Autowired
     public void setSpringBean(List<MyInterface> list){
+    // list.stream().forEach(a->a.getClass().getSimpleName());
+     // for (
 
+    //  )
     }
 }
